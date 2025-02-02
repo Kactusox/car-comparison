@@ -1,0 +1,314 @@
+/* Header Part TOP */
+
+.mainContainer {
+  background-image: url('../img/mainBackground.png');
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+.header {
+  color: #fff; 
+  padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}   
+.container h1 {
+  font-size: 40px;
+  font-weight: 700;
+}   
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav a {
+  color: #fff;
+  text-decoration: none;
+}
+.nav a:hover {
+  color:goldenrod;
+}
+
+.nav li {
+  list-style: none;
+  margin-left: 10px;
+  font-size: 22px;
+  font-style: none;
+}   
+.sign-in-btn {
+  margin-left: 20px;
+  background-color: #fff ; 
+  border: none;
+  color: #000000;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+    
+.sign-in-btn:hover {
+  background-color: #d69028; 
+  color: #fff;
+}
+.icon {
+  margin-right: 5px;
+}
+  
+.icon:hover {
+  background-color: #d69028; 
+  color: #fff;
+}
+  
+
+/* Search section in the middle */
+  
+
+.text-center {
+  text-align: center;
+  margin: auto;
+  /* width: 400px;
+  height: 300px; */
+  /* background-color: yellowgreen;9 */
+  margin-top: 200px;
+}
+
+.text-center h2 {
+  color: #fff;
+  font-size: 70px;
+  width: 720px;
+  text-align: center;
+  margin: auto;
+}
+  
+.search-bar {
+  width: 720px;
+  height: 66px;
+  border-radius: 80px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  margin: auto;
+  margin-top: 60px ;
+}
+  
+.search-bar select {
+  border: none;
+  font-size: 18px;
+}
+.searchBtn {
+  width: 220px;
+  border-radius: 80px;
+  height: 50px;
+  background-color: #405FF2;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center; 
+}
+    
+  /* Finalizing the header */
+  
+  
+  /* Compare Section Header */
+
+.compareHeader {
+  margin-bottom: 30px;
+  margin-top: 170px;
+  border-top-right-radius: 80px ;
+  border-top-left-radius: 80px ;
+  background-color: #eaeaea;
+  width: 100%;
+  padding: 0px 200px 0px 200px;
+  height: 280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #298cbd;  */
+}
+  
+.compareHeader h3 {
+  font-size: 70px;
+  font-weight: 600;
+}
+
+.compareHeader p {
+  font-size: 20px;
+  font-weight: bold;
+}
+  
+
+/* Comaprison Section  */
+.compare-cars-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 20px; 
+  padding: 20px;
+}
+
+.car-form-card {
+  background-color:#E6EBFE;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 550px; 
+  height: 700px;
+}
+  
+.car-image {
+  width: 100%;
+  border-radius: 15px;
+}
+  
+.car-form label {
+  margin: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.form-title {
+  font-size: 35px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+    
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  font-size: 16px;
+  color: #333;
+}
+  
+.compareBtn {
+  width: 250px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #3A425F;
+  color: #ffff;
+  text-align: center;
+  margin: auto;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin-top: 50px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+  
+.compareBtn:hover {
+  background-color: #556987;  
+  color: #ffffff;             
+  cursor: pointer;            
+  transform: scale(1.05);     
+}
+
+/* Finalizing Comparison Section */ 
+
+
+/* Popular Comparisons */
+
+.popular-comparisons {
+  width: 100%;
+  height: 100vh;
+  background-color: #3A425F;
+  margin-top: 50px;
+}
+.popular-comparisons h3 {
+  color: #fff;
+  font-size: 50px;
+  width: 300px;
+  margin-left:200px;
+  padding-top: 150px;
+  /* text-decoration: underline; */
+  /* background-color: aquamarine; */
+}
+.popular-comparisons hr {
+  width: 350px;
+  color: #ffffff;
+  margin-left: 200px;
+}
+  
+.comparison-cards {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* background-color: aqua;  */
+  padding: 50px;
+}
+.card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  overflow: hidden;
+}
+.card {
+  background-color: #fff;
+  width: 649px;
+  height: 380px;
+  border-radius: 15px;
+  border: none;
+}
+.card p {
+  font-size: 20px;
+  color: #050B20 ;
+  /* background-color: aqua; */
+  width: 450px;
+  margin: 20px;
+  padding: 10px;
+  border-bottom: 0.5px solid #E9E9E9;
+}
+.iconLink {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* background-color: beige; */
+  /* margin: 20px; */
+  padding: 20px;
+  font-size: 20px;
+}
+.iconLink a {
+  font-size: 18px;
+  color: #405FF2;
+  /* padding: 5px; */
+}
+  
+/* Finalizing */
+  
+
+/* Footer */
+.footer {
+  background-color: #ffffff;
+  color: #000000;
+  width: 100%;
+  height: 180px;
+  border-top-left-radius: 80px ;
+  border-top-right-radius: 80px ;
+  text-align: center;
+  padding: 70px;
+  margin-top: -70px ;
+}
+.footerCon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  height: 100px ;
+  font-size: 35px;
+}
+  
+  

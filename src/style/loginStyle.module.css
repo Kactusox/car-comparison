@@ -1,0 +1,130 @@
+.loginContainer {
+    display: flex;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background-color: #5cb7a5;
+}
+
+.loginLeft {
+    width: 50%;
+    background-color: #3A425F;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 180px;
+  }
+  
+.loginLeft h1 {
+    font-size: 80px;
+    margin-bottom: 10px;
+  }
+  
+  .loginLeft h3 {
+    font-size: 40px;
+    margin-bottom: 60px;
+  }
+  
+  .loginLeft hr {
+    width: 500px;
+    border: 1px solid #fff;
+    margin: 20px 0;
+  }
+  
+  .loginLeft p {
+    font-size: 20px;
+    color: #ffffff;
+  }
+  
+  .formGroup {
+    display: flex;
+    align-items: center;
+    background-color: #ecf0f1;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 8px;
+    width: 100%;
+    /* height: 60px; */
+    /* background-color: #1abc9c; */
+  
+  }
+  
+  .formGroup input {
+    background: none;
+    border: none;
+    outline: none;
+    width: 520px;
+    font-size: 16px;
+    display: flex;
+    /* background-color: #1abc9c; */
+  }
+  .formGroup input::placeholder {
+    color: #333;
+    display: flex;
+    align-items: center;
+  }
+  .icon {
+    color: #7f8c8d;
+    margin-right: 10px;
+  }
+  
+  .loginBtn {
+    background-color: #1abc9c;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    width: 300px;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  
+  .googleBtn {
+    background-color: #fff;
+    color: #2c3e50;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    width: 300px;
+    margin: auto;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .googleIcon {
+    margin-right: 10px;
+  }
+  
+  .footerText {
+    margin-top: 20px;
+    color: #b0bec5;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .footerText a {
+    color: #1abc9c;
+    text-decoration: none;
+  }
+  
+  /* Right side (only car image) */
+  .loginRight {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.carImage {
+    max-width: 100%;
+    height: 100vh;
+    border-radius: none;
+  } 
