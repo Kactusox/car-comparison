@@ -9,6 +9,7 @@ import Layout from './navigation/Layout'
 import Login from './registrationpages/login';
 import Signin from './registrationpages/signin';
 import CarDetails from './searchresult'
+import AdminDashboard  from './adminpage/admindashboard';
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/signin" element={<Signin/>} />
             <Route path="/searchresult" element={<CarDetails/>} />
-
+            <Route path="/admin" element={<AdminDashboard/>} />
           </Routes>
         </Layout>
       </div>

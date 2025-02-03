@@ -78,12 +78,12 @@ function CompareCars() {
       
       <div className="compare-cars-container">
         <CarForm 
-          title="Add First Car"  /* first car */
+          title="Select First Car"  /* first car */
           imageUrl= {car1} alt="First Car"
         />
 
         <CarForm 
-          title="Add Second Car"  /* second car */
+          title="Select Second Car"  /* second car */
           imageUrl={car2} alt="Second car"
         />
       </div>
