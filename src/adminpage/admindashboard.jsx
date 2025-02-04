@@ -1,6 +1,6 @@
 import React from "react";
 import   './admindashStyle.css';
-import { FaCarSide, FaUsers, FaUserFriends, FaCogs, FaChartBar, FaSignOutAlt } from "react-icons/fa";
+import { FaCarSide, FaUsers, FaUserFriends,  FaChartBar, FaSignOutAlt } from "react-icons/fa";
 import { CiSettings } from "react-icons/ci";
 
 function AdminDashboard () {
@@ -22,7 +22,7 @@ function AdminDashboard () {
           </ul>
 
 
-          <a className="logout" href="">Log Out</a>
+          <a className="logout" href=""><FaSignOutAlt className="icons"></FaSignOutAlt>  Log Out</a>
 
         </div>
 
