@@ -10,6 +10,7 @@ import Login from './registrationpages/login';
 import Signin from './registrationpages/signin';
 import CarDetails from './searchresult'
 import AdminDashboard  from './adminpage/admindashboard';
+import CarManagement  from './adminpage/adminCarManagement';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/signin" element={<Signin/>} />
             <Route path="/searchresult" element={<CarDetails/>} />
             <Route path="/admin" element={<AdminDashboard/>} />
+            <Route path='/admincar' element= {<CarManagement/>} />
           </Routes>
         </Layout>
       </div>
