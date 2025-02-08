@@ -74,7 +74,7 @@ body {
 }
 .list-options:hover {
   background-color: #e8e5e5;
-  background-color: #5883B8;
+  /* background-color: #5883B8; */
 }
 .icons:hover {
   color: #fff;
