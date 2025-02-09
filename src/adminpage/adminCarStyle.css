@@ -9,5 +9,99 @@
 
 .form-select {
     height: 60px;
-
 }
+.cars {
+    border-top: 1px solid black;
+}
+
+.cars-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.cars {
+    display: flex;
+    justify-content: space-around;
+
+    /* gap: 20px; */
+    flex-wrap: wrap;
+    padding: 50px;
+    /* background-color: #666; */
+}
+
+.car-card {
+    width: 280px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background: white;
+    text-align: center;
+    padding: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.car-card:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.car-image {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.car-details {
+    margin-top: 10px;
+}
+
+.car-name {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.car-brand {
+    color: #666;
+    font-size: 14px;
+}
+
+.car-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.edit-icon {
+    color: blue;
+    cursor: pointer;
+}
+
+.delete-icon {
+    color: red;
+    cursor: pointer;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.pagination-btn {
+    border: 1px solid #000;
+    background: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.pagination-btn:hover {
+    background-color: #3A425F;
+    color: #fff;
+}
+.pagination-text {
+    font-size: 14px;
+}
+  

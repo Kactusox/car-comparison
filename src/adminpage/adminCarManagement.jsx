@@ -1,10 +1,22 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { FaCarSide, FaUsers, FaUserFriends,  FaChartBar, FaSignOutAlt } from "react-icons/fa";
 import { CiSettings } from "react-icons/ci";
 import { BarChart, Car, Users, Settings, LogOut, Search, Edit, Trash2, Plus } from 'lucide-react';
 import './adminCarStyle.css';
+import carsImage from '../img/12 2.png'
+
+const cars = [
+    { id: 1, name: "Sonata Hybrid, 2023", brand: "Hyundai", image: carsImage },
+    { id: 2, name: "Sonata Hybrid, 2023", brand: "Hyundai", image: carsImage },
+    { id: 3, name: "Sonata Hybrid, 2023", brand: "Hyundai", image: carsImage },
+];
 
 function CarManagement() {
+    const [currentPage, setCurrentPage] = useState(1);
+    const carsPerPage = 10;
+    const totalCars = 100;
+
+
     return (
         <div className='adminContainer'>
             <div className="admin-header">
@@ -76,6 +88,7 @@ function CarManagement() {
                                 </select>
                             </div>
 
+
                         </div>
 
                     </div>
@@ -84,7 +97,36 @@ function CarManagement() {
 
             </div>
 
-         </div>
+            {/* The Cars List/Cards */}
+
+            <div className='cars'>
+                {cars.map((car) => (
+                <div key={car.id} className="car-card">
+                    <img src={car.image} alt={car.name} className="car-image" />
+                    <div className="car-details">
+                    <p className="car-name">{car.name}</p>
+                    <p className="car-brand">{car.brand}</p>
+                        <div className="car-actions">
+                            <Edit size={16} className="edit-icon" />
+                            <Trash2 size={16} className="delete-icon" />
+                        </div>
+                    </div>
+                </div>
+                ))}
+            </div>
+
+            {/* Pages */}
+
+            <div className="pagination">
+                <button className="pagination-btn">10 Per Page</button>
+                <span className="pagination-text">
+                Showing {currentPage} To {carsPerPage} Of {totalCars} Entries
+                </span>
+                <button className="pagination-btn">Previous</button>
+                <button className="pagination-btn">Next</button>
+            </div>
+
+        </div>
     );
 };
 
