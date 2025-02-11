@@ -30,7 +30,7 @@ function CarForm({ title, imageUrl }) {
 
       <h2 className="form-title">{title}</h2>
 
-      <form className="car-form">
+      <form className="car-forma">
         <div className="form-group">
           <label htmlFor="make">Make</label>
           <select id="make" className="form-control">

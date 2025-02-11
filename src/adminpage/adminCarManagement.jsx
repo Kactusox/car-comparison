@@ -3,18 +3,22 @@ import { FaCarSide, FaUsers, FaUserFriends,  FaChartBar, FaSignOutAlt } from "re
 import { CiSettings } from "react-icons/ci";
 import { BarChart, Car, Users, Settings, LogOut, Search, Edit, Trash2, Plus } from 'lucide-react';
 import './adminCarStyle.css';
+import AddCarModal from "./addCarModal"
 import carsImage from '../img/12 2.png'
 
 const cars = [
-    { id: 1, name: "Sonata Hybrid, 2023", brand: "Hyundai", image: carsImage },
-    { id: 2, name: "Sonata Hybrid, 2023", brand: "Hyundai", image: carsImage },
-    { id: 3, name: "Sonata Hybrid, 2023", brand: "Hyundai", image: carsImage },
+    { id: 1, name: "Sonata Hybrid", year: 2003,  brand: "Hyundai", image: carsImage },
+    { id: 2, name: "Sonata Hybrid", year: 2003,  brand: "Hyundai", image: carsImage },
+    { id: 3, name: "Sonata Hybrid", year: 2003, brand: "Hyundai", image: carsImage },
+    { id: 4, name: "Sonata Hybrid", year: 2003, brand: "Hyundai", image: carsImage },
+
 ];
 
 function CarManagement() {
     const [currentPage, setCurrentPage] = useState(1);
     const carsPerPage = 10;
     const totalCars = 100;
+    const [showModal, setShowModal] = useState(false);
 
 
     return (
@@ -40,7 +44,7 @@ function CarManagement() {
                 <div className='mainBody'>
                     <div className="custom-div d-flex justify-content-between h-5 bg-color-white">
                         <h2>Car Management</h2>
-                        <button className="btn btn-primary">
+                        <button className="btn btn-primary" onClick={() => setShowModal(true)}>
                         <Plus size={16} className="me-2" />
                         Add New Car
                         </button>
@@ -104,11 +108,14 @@ function CarManagement() {
                 <div key={car.id} className="car-card">
                     <img src={car.image} alt={car.name} className="car-image" />
                     <div className="car-details">
-                    <p className="car-name">{car.name}</p>
-                    <p className="car-brand">{car.brand}</p>
+                        <div className='car-namings'> 
+                            <p className="cars-name">{car.name}, {car.year}</p>
+                            <p className="car-brand">{car.brand}</p>
+                        </div>
+                   
                         <div className="car-actions">
-                            <Edit size={16} className="edit-icon" />
-                            <Trash2 size={16} className="delete-icon" />
+                            <Edit size={20} className="edit-icon" />
+                            <Trash2 size={20} className="delete-icon" />
                         </div>
                     </div>
                 </div>
@@ -126,7 +133,11 @@ function CarManagement() {
                 <button className="pagination-btn">Next</button>
             </div>
 
-        </div>
+            {/* Add NEw Car modal */}
+
+            {showModal && <AddCarModal setShowModal={setShowModal}/>}
+
+        </div>        
     );
 };
 
