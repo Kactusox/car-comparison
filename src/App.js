@@ -14,6 +14,7 @@ import AdminDashboard  from './adminpage/admindashboard';
 import CarManagement  from './adminpage/adminCarManagement';
 import { ImPrevious } from 'react-icons/im';
 import UserManagement from './adminpage/usermanagement';
+import Inbox from './adminpage/admininbox';
 
 function App() {
   return (
@@ -31,6 +32,8 @@ function App() {
             <Route path="/admin" element={<AdminDashboard/>} />
             <Route path='/admincar' element= {<CarManagement/>} />
             <Route path='/users' element= {<UserManagement/>} />
+            <Route path='/inbox' element= {<Inbox/>} />
+
           </Routes>
         </Layout>
       </div>

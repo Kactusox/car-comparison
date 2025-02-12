@@ -35,7 +35,7 @@ function CarManagement() {
                         <li className="list-options"><FaChartBar className="icons"></FaChartBar> <a href="/admin">Dashboard</a></li>
                         <li className="list-options"><FaCarSide className="icons"></FaCarSide> <a href="">Car Management</a></li>
                         <li className="list-options"><FaUserFriends className="icons"></FaUserFriends> <a href="/users">User Management</a></li>
-                        <li className="list-options"><FaInbox className="icons"></FaInbox> <a href="">Inbox</a></li>
+                        <li className="list-options"><FaInbox className="icons"></FaInbox> <a href="/inbox">Inbox</a></li>
                         <li className="list-options"><CiSettings className="icons"></CiSettings> <a href="">System Settings</a></li>
                     </ul>
 

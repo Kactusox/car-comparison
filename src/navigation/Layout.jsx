@@ -9,7 +9,9 @@ function Layout({ children }) {
     return (
       <>
         {/* Hide Navbar on home, login, and signin pages */}
-        {location.pathname !== '/' && location.pathname !== '/admin' && location.pathname !== '/admincar'  && location.pathname !== '/users'  && <Navbar />}
+        {location.pathname !== '/' && location.pathname !== '/admin' && location.pathname !== '/admincar'  && location.pathname !== '/users' 
+         && location.pathname !== '/inbox' 
+        && <Navbar />}
         {children}
       </>
       // && location.pathname !== '/login' && location.pathname !== '/signin'
