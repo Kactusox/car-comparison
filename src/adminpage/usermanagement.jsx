@@ -5,7 +5,7 @@ import { Search } from "lucide-react";
 import { FaEdit, FaTrash } from "react-icons/fa";
 import './adminpageStyle/usermanagement.css'
 
-const users = [
+const initialUsers = [
     { id: 1, username: "Kactus", createdAt: "01.01.2025" },
     { id: 2, username: "wiutadmin", createdAt: "03.02.2025" },
     { id: 3, username: "user111", createdAt: "05.03.2025" },
@@ -13,11 +13,18 @@ const users = [
 
 function UserManagement() {
     const [searchTerm, setSearchTerm] = useState("");
+    const [users, setUsers] = useState(initialUsers);
 
     // Filter users 
     const filteredUsers = users.filter(user =>
         user.username.toLowerCase().includes(searchTerm.toLowerCase())
     );
+
+    // Delete a user 
+    const deleteUser = (id) => {
+        const updateUsers = users.filter(user => user.id !== id);
+        setUsers(updateUsers);
+    }
 
     return (
         <div className='adminContainer'>
@@ -76,7 +83,7 @@ function UserManagement() {
                                                     <button className="edit-btn">
                                                         <FaEdit />
                                                     </button>
-                                                    <button className="delete-btn">
+                                                    <button className="delete-btn" onClick={() => deleteUser(user.id)}>
                                                         <FaTrash />
                                                     </button>
                                                 </td>
