@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./adminCarStyle.css";
+import   './adminpageStyle/admindashStyle.css';
 
 const AddCarModal = ({ setShowModal }) => {
   const [formData, setFormData] = useState({

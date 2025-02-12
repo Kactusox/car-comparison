@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { FaCarSide, FaInbox, FaUserFriends,  FaChartBar, FaSignOutAlt } from "react-icons/fa";
 import { CiSettings } from "react-icons/ci";
 import { BarChart, Car, Users, Settings, LogOut, Search, Edit, Trash2, Plus } from 'lucide-react';
-import './adminCarStyle.css';
+import './adminpageStyle/adminCarStyle.css';
 import AddCarModal from "./addCarModal"
 import carsImage from '../img/12 2.png'
 
@@ -34,7 +34,7 @@ function CarManagement() {
                     <ul className="dashboard-options">
                         <li className="list-options"><FaChartBar className="icons"></FaChartBar> <a href="/admin">Dashboard</a></li>
                         <li className="list-options"><FaCarSide className="icons"></FaCarSide> <a href="">Car Management</a></li>
-                        <li className="list-options"><FaUserFriends className="icons"></FaUserFriends> <a href="">User Management</a></li>
+                        <li className="list-options"><FaUserFriends className="icons"></FaUserFriends> <a href="/users">User Management</a></li>
                         <li className="list-options"><FaInbox className="icons"></FaInbox> <a href="">Inbox</a></li>
                         <li className="list-options"><CiSettings className="icons"></CiSettings> <a href="">System Settings</a></li>
                     </ul>

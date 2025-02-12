@@ -1,5 +1,5 @@
 import React from "react";
-import   './admindashStyle.css';
+import   './adminpageStyle/admindashStyle.css';
 import { FaCarSide, FaUsers, FaUserFriends,  FaChartBar, FaSignOutAlt, FaInbox } from "react-icons/fa";
 import { CiSettings } from "react-icons/ci";
 
@@ -17,7 +17,7 @@ function AdminDashboard () {
           <ul className="dashboard-options">
             <li className="list-options"><FaChartBar className="icons"></FaChartBar> <a href="">Dashboard</a></li>
             <li className="list-options"><FaCarSide className="icons"></FaCarSide> <a href="/admincar">Car Management</a></li>
-            <li className="list-options"><FaUserFriends className="icons"></FaUserFriends> <a href="">User Management</a></li>
+            <li className="list-options"><FaUserFriends className="icons"></FaUserFriends> <a href="/users">User Management</a></li>
             <li className="list-options"><FaInbox className="icons"></FaInbox> <a href="">Inbox</a></li>
             <li className="list-options"><CiSettings className="icons"></CiSettings> <a href="">System Settings</a></li>
           </ul>
