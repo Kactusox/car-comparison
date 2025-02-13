@@ -2,6 +2,7 @@ import React from "react";
 import   './adminpageStyle/admindashStyle.css';
 import { FaCarSide, FaUsers, FaUserFriends,  FaChartBar, FaSignOutAlt, FaInbox } from "react-icons/fa";
 import { CiSettings } from "react-icons/ci";
+import CarManagement from "./adminCarManagement";
 
 function AdminDashboard () {
   return (
@@ -23,7 +24,7 @@ function AdminDashboard () {
           </ul>
 
 
-          <a className="logout" href=""><FaSignOutAlt className="icons"></FaSignOutAlt>  Log Out</a>
+          <a className="logout" href="/"><FaSignOutAlt className="icons"></FaSignOutAlt>  Log Out</a>
 
         </div>
 
@@ -35,7 +36,7 @@ function AdminDashboard () {
 
           <div className="total-car">
             <h3><FaCarSide className="icons"></FaCarSide> Total Cars</h3>
-            <p>1567</p>
+            <p>{}</p>
           </div>
         </div>
       </div>

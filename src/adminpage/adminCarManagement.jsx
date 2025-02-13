@@ -6,19 +6,48 @@ import './adminpageStyle/adminCarStyle.css';
 import AddCarModal from "./addCarModal"
 import carsImage from '../img/12 2.png'
 
-const cars = [
-    { id: 1, name: "Sonata Hybrid", year: 2003,  brand: "Hyundai", image: carsImage },
-    { id: 2, name: "Sonata Hybrid", year: 2003,  brand: "Hyundai", image: carsImage },
-    { id: 3, name: "Sonata Hybrid", year: 2003, brand: "Hyundai", image: carsImage },
-    { id: 4, name: "Sonata Hybrid", year: 2003, brand: "Hyundai", image: carsImage },
-
+const carsData = [
+    { id: 1, name: "Sonata Hybrid", year: 2023, brand: "Hyundai", image: carsImage },
+    { id: 2, name: "Elantra", year: 2022, brand: "Hyundai", image: carsImage },
+    { id: 3, name: "Corolla", year: 2021, brand: "Toyota", image: carsImage },
+    { id: 4, name: "Camry", year: 2020, brand: "Toyota", image: carsImage },
+    { id: 5, name: "Civic", year: 2019, brand: "Honda", image: carsImage },
+    { id: 6, name: "Accord", year: 2018, brand: "Honda", image: carsImage },
+    { id: 7, name: "Rav4", year: 2023, brand: "Toyota", image: carsImage },
+    { id: 8, name: "Pilot", year: 2022, brand: "Honda", image: carsImage },
+    { id: 9, name: "Tucson", year: 2021, brand: "Hyundai", image: carsImage },
+    { id: 10, name: "CR-V", year: 2020, brand: "Honda", image: carsImage },
+    { id: 11, name: "Highlander", year: 2019, brand: "Toyota", image: carsImage },
+    { id: 12, name: "Santa Fe", year: 2018, brand: "Hyundai", image: carsImage },
+    { id: 13, name: "Yaris", year: 2023, brand: "Toyota", image: carsImage },
+    { id: 14, name: "Odyssey", year: 2022, brand: "Honda", image: carsImage },
+    { id: 15, name: "Genesis G70", year: 2021, brand: "Hyundai", image: carsImage }
 ];
+
+
 
 function CarManagement() {
     const [currentPage, setCurrentPage] = useState(1);
     const carsPerPage = 10;
-    const totalCars = 100;
+    const totalCars = carsData.length;
     const [showModal, setShowModal] = useState(false);
+
+    const [searchQuery, setSearchQuery] = useState('');
+    const [brandFilter, setBrandFilter] = useState('');
+    const [modelFilter, setModelFilter] = useState('');
+    const [yearFilter, setYearFilter] = useState('');
+
+    const filteredCars = carsData.filter((car) => {
+        return (
+            (brandFilter === "" || car.brand.toLowerCase() === brandFilter.toLowerCase()) &&
+            (modelFilter === "" || car.name.toLowerCase().includes(modelFilter.toLowerCase())) &&
+            (yearFilter === "" || car.year.toString() === yearFilter) &&
+            (searchQuery === "" || car.name.toLowerCase().includes(searchQuery.toLowerCase()) || car.brand.toLowerCase().includes(searchQuery.toLowerCase()))
+        );
+    });
+
+
+
 
 
     return (
@@ -62,6 +91,8 @@ function CarManagement() {
                                 className="form-control border-start-0 ps-2"
                                 placeholder="Search Cars..."
                                 aria-label="Search Cars"
+                                value={searchQuery}
+                                onChange={(e) => setSearchQuery(e.target.value)}
                             />
                         </div>
 
@@ -69,7 +100,7 @@ function CarManagement() {
 
                         <div className='column mt-5'>
                             <div className="col mb-4 mt-4">
-                                <select className="form-select">
+                                <select className="form-select" onChange={(e) => setBrandFilter(e.target.value)}>
                                 <option value="">All Company</option>
                                 <option value="hyundai">Hyundai</option>
                                 <option value="toyota">Toyota</option>
@@ -77,7 +108,7 @@ function CarManagement() {
                                 </select>
                             </div>
 
-                            <div className="col mb-4 mt-4">
+                            <div className="col mb-4 mt-4" onChange={(e) => setModelFilter(e.target.value)}>
                                 <select className="form-select">
                                 <option value="">All Model</option>
                                 <option value="sonata">Sonata</option>
@@ -85,7 +116,7 @@ function CarManagement() {
                                 </select>
                             </div>
 
-                            <div className="col mb-4 mt-4">
+                            <div className="col mb-4 mt-4" onChange={(e) => setYearFilter(e.target.value)}>
                                 <select className="form-select">
                                 <option value="">All Year</option>
                                 <option value="2023">2023</option>
@@ -105,22 +136,25 @@ function CarManagement() {
             {/* The Cars List/Cards */}
 
             <div className='cars'>
-                {cars.map((car) => (
-                <div key={car.id} className="car-card">
-                    <img src={car.image} alt={car.name} className="car-image" />
-                    <div className="car-details">
-                        <div className='car-namings'> 
-                            <p className="cars-name">{car.name}, {car.year}</p>
-                            <p className="car-brand">{car.brand}</p>
-                        </div>
-                   
-                        <div className="car-actions">
-                            <Edit size={20} className="edit-icon" />
-                            <Trash2 size={20} className="delete-icon" />
-                        </div>
-                    </div>
-                </div>
-                ))}
+                {filteredCars.length > 0 ? (
+                    filteredCars.map((car) => (
+                        <div key={carsData.id} className="car-card">
+                                <img src={car.image} alt={car.name} className="car-image" />
+                                    <div className="car-details">
+                                        <div className='car-namings'> 
+                                            <p className="cars-name">{car.name}, {car.year}</p>
+                                            <p className="car-brand">{car.brand}</p>
+                                        </div>
+                                        <div className="car-actions">
+                                            <Edit size={20} className="edit-icon" />
+                                            <Trash2 size={20} className="delete-icon" />
+                                        </div>
+                                    </div>
+                                </div>
+                            ))
+                        ) : (
+                            <p>No cars found.</p>
+                        )}
             </div>
 
             {/* Pages */}

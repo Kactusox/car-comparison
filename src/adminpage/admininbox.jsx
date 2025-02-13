@@ -31,7 +31,7 @@ function Inbox() {
             <div className="bodyContainer">
                 <div className="sidebar">
                   <ul className="dashboard-options">
-                    <li className="list-options"><FaChartBar className="icons"></FaChartBar> <a href="">Dashboard</a></li>
+                    <li className="list-options"><FaChartBar className="icons"></FaChartBar> <a href="/admin">Dashboard</a></li>
                     <li className="list-options"><FaCarSide className="icons"></FaCarSide> <a href="/admincar">Car Management</a></li>
                     <li className="list-options"><FaUserFriends className="icons"></FaUserFriends> <a href="/users">User Management</a></li>
                     <li className="list-options"><FaInbox className="icons"></FaInbox> <a href="">Inbox</a></li>
