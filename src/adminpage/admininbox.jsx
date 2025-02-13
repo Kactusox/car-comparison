@@ -39,7 +39,7 @@ function Inbox() {
                   </ul>
         
         
-                  <a className="logout" href=""><FaSignOutAlt className="icons"></FaSignOutAlt>  Log Out</a>
+                  <a className="logout" href="/"><FaSignOutAlt className="icons"></FaSignOutAlt>  Log Out</a>
     
                 </div>
 

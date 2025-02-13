@@ -44,7 +44,7 @@ function UserManagement() {
                                 <li className="list-options"><CiSettings className="icons"></CiSettings> <a href="">System Settings</a></li>
                             </ul>
         
-                            <a className="logout" href=""><FaSignOutAlt className="icons"></FaSignOutAlt>  Log Out</a>
+                            <a className="logout" href="/"><FaSignOutAlt className="icons"></FaSignOutAlt>  Log Out</a>
                         </div>
 
                         <div className="mainBody">
