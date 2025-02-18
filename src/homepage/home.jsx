@@ -104,7 +104,7 @@ function Home() {
           <nav>
             <ul className="nav">
               <li><a href="/">Home</a></li>
-              <li><a href="/pages">Pages</a></li>
+              <li><a href="/pages">Result Page</a></li>
               <li><a href="about">About</a></li>
               <li><a href="/contact">Contact</a></li>
               <button className="sign-in-btn" onClick={handleSignInClick}> 
