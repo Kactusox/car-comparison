@@ -1,8 +1,9 @@
+/* In this CSS file included both design and responsive design of Login and Sign In pages together, since it is small page decided to make it here  */
 .loginContainer {
     display: flex;
     height: 100vh;
     font-family: 'Arial', sans-serif;
-    background-color: #5cb7a5;
+    /* background-color: #5cb7a5; */
 }
 
 .loginLeft {
@@ -46,7 +47,6 @@
     width: 100%;
     /* height: 60px; */
     /* background-color: #1abc9c; */
-  
   }
   
   .formGroup input {
@@ -115,7 +115,7 @@
     text-decoration: none;
   }
   
-  /* Right side (only car image) */
+  /* Right side (car image) */
   .loginRight {
     width: 50%;
     display: flex;
@@ -128,3 +128,202 @@
     height: 100vh;
     border-radius: none;
   } 
+
+
+/* PC and laptops */
+@media screen and (max-width: 1200px) {
+  .loginLeft {
+    padding: 0 100px;
+  }
+
+  .loginLeft h1 {
+    font-size: 70px;
+  }
+
+  .loginLeft h3 {
+    font-size: 35px;
+    margin-bottom: 40px;
+  }
+
+  .loginLeft hr {
+    width: 400px;
+  }
+
+  .formGroup input {
+    width: 420px;
+  }
+
+  .carImage {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+}
+
+/* Larger scrren tablets */
+@media screen and (max-width: 992px) {
+  .loginLeft {
+    padding: 0 60px;
+  }
+
+  .loginLeft h1 {
+    font-size: 60px;
+  }
+
+  .loginLeft h3 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  .loginLeft hr {
+    width: 300px;
+  }
+
+  .formGroup input {
+    width: 100%;
+  }
+
+  .loginBtn,
+  .googleBtn {
+    width: 250px;
+  }
+
+  .carImage {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+  .loginContainer {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .loginLeft,
+  .loginRight {
+    width: 100%;
+  }
+
+  .loginLeft {
+    padding: 40px;
+  }
+
+  .loginLeft h1 {
+    font-size: 50px;
+  }
+
+  .loginLeft h3 {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+
+  .loginLeft hr {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .loginLeft p {
+    font-size: 18px;
+  }
+
+  .loginRight {
+    padding: 0;
+    height: 450px; 
+  }
+
+  .carImage {
+    width: 100%;
+    height: 450px; 
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+/* Mobiles */
+@media screen and (max-width: 576px) {
+  .loginLeft {
+    padding: 30px 20px;
+  }
+
+  .loginLeft h1 {
+    font-size: 40px;
+  }
+
+  .loginLeft h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .loginLeft p {
+    font-size: 16px;
+  }
+
+  .formGroup {
+    padding: 8px;
+    margin: 15px 0;
+  }
+
+  .formGroup input {
+    font-size: 14px;
+  }
+
+  .loginBtn,
+  .googleBtn {
+    width: 200px;
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .loginRight {
+    height: 400px;
+  }
+
+  .carImage {
+    height: 400px;
+    width: 100%;
+  }
+}
+
+/* Smaller devices */
+@media screen and (max-width: 400px) {
+  .loginLeft {
+    padding: 20px 15px;
+  }
+
+  .loginLeft h1 {
+    font-size: 36px;
+  }
+
+  .loginLeft h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .formGroup {
+    padding: 6px;
+    margin: 12px 0;
+  }
+
+  .loginBtn,
+  .googleBtn {
+    width: 180px;
+    font-size: 14px;
+  }
+
+  .footerText {
+    font-size: 14px;
+  }
+
+  .loginRight {
+    height: 350px;
+  }
+
+  .carImage {
+    height: 350px;
+    width: 100%;
+  }
+}
