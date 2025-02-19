@@ -1,6 +1,6 @@
-
 import React from 'react';
 import '../src/style/index.css'
+import './style/responsive-design/about-page.css'
 
 function About() {
   return ( 

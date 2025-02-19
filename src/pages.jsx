@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import cars1 from './img/Mits 1.png';
 import cars2 from './img/12 2.png';
+import { ImPrevious } from 'react-icons/im';
 
 
 const carSpecs = {
@@ -136,22 +137,24 @@ function Pages() {
         <div className='line'></div>
         <p className='Winner-car'>Winner Car: {winnerCar}</p>
 
+        {/* Individual characteristic scores */}
+
         <div className="Table">
-          <table style={{ width: "60%", textAlign: "center", borderCollapse: "collapse" }}>
-            <thead>
-              <tr>
-                <th style={{ borderBottom: "1px solid black", textAlign: "center", paddingTop: "25px", paddingBottom: "8px" }}>
-                  Attributes:
-                </th>
-                <th style={{ borderLeft: "1px solid black", borderRight: "1px solid black", borderBottom: "1px solid black", textAlign: "center", paddingTop: "25px", paddingBottom: "8px" }}>
-                  {carSpecs.mitsubishi.name} Score
-                </th>
-                <th style={{ borderBottom: "1px solid black", textAlign: "center", paddingTop: "25px", paddingBottom: "8px" }}>
-                  {carSpecs.hyundai.name}
-                </th>
-              </tr>
-            </thead>
-            <tbody>
+          <table style={{ width: "48%", textAlign: "center", borderCollapse: "collapse" }}>
+              <thead>
+                <tr>
+                  <th style={{ borderBottom: "1px solid black", textAlign: "center", paddingTop: "25px", paddingBottom: "8px" }}>
+                    Attributes:
+                  </th>
+                  <th style={{ borderLeft: "1px solid black", borderRight: "1px solid black", borderBottom: "1px solid black", textAlign: "center", paddingTop: "25px", paddingBottom: "8px" }}>
+                    {carSpecs.mitsubishi.name} Score
+                  </th>
+                  <th style={{ borderBottom: "1px solid black", textAlign: "center", paddingTop: "25px", paddingBottom: "8px" }}>
+                    {carSpecs.hyundai.name}
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
               {carSpecs.mitsubishi.scores.map((score, index) => (
                 <tr key={index}>
                   <td style={{ borderBottom: "1px solid black", paddingTop: "25px", paddingBottom: "8px" }}>
@@ -165,7 +168,7 @@ function Pages() {
                   </td>
                 </tr>
               ))}
-            </tbody>
+              </tbody>
           </table>
         </div>
 

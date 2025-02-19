@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import '../src/style/index.css'
+import './style/responsive-design/contact-responsive.css'
 
 
 
