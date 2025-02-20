@@ -8,6 +8,7 @@
   height: 100vh;
   user-select: none;
 }
+
 .header {
   color: #fff; 
   padding: 15px 30px;
@@ -24,6 +25,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  gap: 20px;
 }
 .nav a {
   color: #fff;
